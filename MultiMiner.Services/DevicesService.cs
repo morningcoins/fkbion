@@ -66,7 +66,7 @@ namespace MultiMiner.Services
             if (!mining)
             {
                 devices.RemoveAll(d =>
-                    (d.Kind == DeviceKind.PXY) &&
+                    (d.Kind == DeviceKind.STARCOIN) &&
                     (
                         (!xgminerConfiguration.StratumProxy) ||
                         (!xgminerConfiguration.StratumProxies.Any(sp => String.Format("{0}:{1}", sp.GetworkPort, sp.StratumPort).Equals(d.Path)))

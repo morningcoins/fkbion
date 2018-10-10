@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.Win", "MultiMine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.Xgminer.Api", "MultiMiner.Xgminer.Api\MultiMiner.Xgminer.Api.csproj", "{5B43AD9D-8B67-4AA8-B76D-AA83CAF9D29F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.CoinChoose", "MultiMiner.Coinchoose\MultiMiner.CoinChoose.csproj", "{D9B3F627-CB7A-454C-AF8F-70C8FB584553}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.starcoinChoose", "MultiMiner.starcoinchoose\MultiMiner.starcoinChoose.csproj", "{D9B3F627-CB7A-454C-AF8F-70C8FB584553}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.MobileMiner", "MultiMiner.MobileMiner\MultiMiner.MobileMiner.csproj", "{70622816-5853-4470-9432-9ACDA2E96089}"
 EndProject
@@ -21,13 +21,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.Update", "MultiM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.Utility", "MultiMiner.Utility\MultiMiner.Utility.csproj", "{99B0F266-EFF7-4416-8C36-8356396A11CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.CoinWarz", "MultiMiner.CoinWarz\MultiMiner.CoinWarz.csproj", "{5B2B2592-689A-4DE2-815C-259427A3D101}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.starcoinWarz", "MultiMiner.starcoinWarz\MultiMiner.starcoinWarz.csproj", "{5B2B2592-689A-4DE2-815C-259427A3D101}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.CoinApi", "MultiMiner.CoinApi\MultiMiner.CoinApi.csproj", "{9E86F77A-68B9-4D72-82D2-855878BA8CB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.starcoinApi", "MultiMiner.starcoinApi\MultiMiner.starcoinApi.csproj", "{9E86F77A-68B9-4D72-82D2-855878BA8CB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B61C67E8-898E-469C-BA76-42A2B9C6B9BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.Coinbase", "MultiMiner.Coinbase\MultiMiner.Coinbase.csproj", "{95F6C880-7AB3-441B-8D41-28C0AD507B62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.starcoinbase", "MultiMiner.starcoinbase\MultiMiner.starcoinbase.csproj", "{95F6C880-7AB3-441B-8D41-28C0AD507B62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMiner.Xgminer.Api.Client", "MultiMiner.Xgminer.Api.Client\MultiMiner.Xgminer.Api.Client.csproj", "{6A2D8FEC-E7D0-412A-9F76-C476347ADBEB}"
 EndProject
