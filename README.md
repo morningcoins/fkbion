@@ -1,280 +1,125 @@
-## MultiMiner
+区块链简介
 
-### Your starcoin. Your pools. Your way.
+区块链（blockchain）作为比特币的底层技术受到了越来越多的关注，其去中心化的分布式数据库存储结构有着广阔的应用场景。本文从一下五个方面介绍一下区块链技术:
 
-**MultiMiner** is a graphical application for crypto-coin mining on Windows, OS X and Linux. MultiMiner simplifies switching individual devices (**GPUs**, **ASICs**, **FPGAs**, **CPUs**) between crypto-currencies such as Bitcoin, Litecoin, Ethereum, Monero, Zcash, and more, while also allowing you to manage any mining appliances on your network (**AntMiners**, **G-Black**, Raspberry **Pi controllers**, **Spondoolies** and more).
 
-* [Installation](https://github.com/nwoolls/MultiMiner/wiki/Installation)
-* [Getting Started](https://github.com/nwoolls/MultiMiner/wiki/Getting-Started)
-* [Local Devices](https://github.com/nwoolls/MultiMiner/wiki/Local-Devices)
-* [Network Devices](https://github.com/nwoolls/MultiMiner/wiki/Network-Devices)
-* [Remote Management](https://github.com/nwoolls/MultiMiner/wiki/Remote-Management)
-* [Contributing](https://github.com/nwoolls/MultiMiner/wiki/Contributing)
-* [Tips & Tricks](https://github.com/nwoolls/MultiMiner/wiki/Tips-and-Tricks)
+  
+  区块链的概念
+  区块链的发展历史
+  区块链的特点
+  区块链的结构
+  区块链的应用
+  
 
-MultiMiner uses the underlying mining engine ([BFGMiner](https://github.com/luke-jr/bfgminer)) to detect available mining devices and then presents a user interface for selecting the starcoin you'd like to mine.
 
-![Main Screen]
 
-MultiMiner supports mining starcoin that use the following algorithms out-of-the-box:
 
-* SHA256
-* Scrypt
-* CryptoNight
-* Equihash
-* Ethash
-* Pascal
-* Groestl
-* Keccak
-* Lyra2RE
-* NeoScrypt
-* Quark
-* Scrypt-Jane
-* Scrypt-N
-* X11
-* X13
-* X14
-* X15
+1. 区块链的概念
 
-Additionally, MultiMiner allows the user to add any unsupported algorithm, coin, and miner, as long as there is a CGMiner, BFGMiner or SGMiner fork that supports the algorithm.
+狭义上讲，区块链是一种按照时间顺序将数据区块以链条的方式组合成特定数据结构，并以密码学的方式保证其不可篡改、不可伪造的去中心化共享总账（Decentralized Shared Ledger），能够安全存储简单的、有先后关系、 能在系统内验证的数据。[1]
 
-See the following topics for more information on adding unsupported algorithms:
 
-* [GPU Algorithms](https://github.com/nwoolls/MultiMiner/wiki/GPU-Algorithms)
-* [Backend Miners](https://github.com/nwoolls/MultiMiner/wiki/Backend-Miners)
+  简单的讲，区块链就是一个去中心化的分布式数据库，分布式环境中的每一个节点都不能保证可信。数据库中存储的是以时间先后顺序排列的数据区块，每一个区块中保存的是若干条交易记录，运用密码学的方法生成区块以保证其中数据不可篡改、不可伪造、可以验证；以共识算法使全网所有节点（理论上是所有节点）完成对区块的认可。
 
-MultiMiner ships with a [console application](https://github.com/nwoolls/MultiMiner/wiki/Console-Mode-(TUI)#console-mode-tui) (TUI) for low power devices such as ARM-based miners.
 
-![Console Application]
+广义上讲，区块链技术是利用加密链式区块结构来验证和存储数据、利用分布式节点共识算法来生成和更新数据、利用自动化脚本代码（智能合约）来编程和操作数据的一种全新的去中心化基础架构和分布式计算范式。[2]
 
-MultiMiner offers several views, allowing you to display as much or as little information as you like.
 
-![Brief View]
 
-For new users, MultiMiner includes a [Getting Started](https://github.com/nwoolls/MultiMiner/wiki/Getting-Started#getting-started) wizard that walks you through selecting an engine, a coin, and a pool.
+2. 区块链的发展历史
 
-![Getting Started]( "Getting Started")
+区块链技术脱胎于比特币，在中本聪2008年发表的《比特币：一种点对点的电子现金系统中》一文中，区块（Block）和链（Chain）作为比特币系统的核心技术被提出来。区块链发展至今可分为3个阶段[3]：
 
-MultiMiner will automatically download and install the latest version of [BFGMiner][2], making it simple for the new user to get started.
 
-![Downloading and Installing Cgminer]("Downloading and Installing Cgminer")
+  第一阶段：区块链1.0 —— 数字货币 
+  最具有代表意义的就是比特币了，其以区块链作为底层技术，是区块俩最初始的应用。 
+  第二阶段：区块链2.0 —— 数字资产和智能合约 
+  代表产品有2014年7月的Ethereum（以太坊），其将智能合约理念推进到了极致，还有2015年3月的Factom（公正通）以及国内的太一系统等。 
+  第三阶段：区块链3.0 —— DAO、DAC → 区块链大社会 
+  DAO、DAC指区块链自治组织、区块链自治公司。这一阶段是区块链技术广泛应用于人们生活和生产的各个方面，区块链被人们广泛接受，比如区块链应用于能源互联网的能源区块链，区块链应用于医疗事业的医疗区块链等等 
 
-You can then use the [Configure Pools](https://github.com/nwoolls/MultiMiner/wiki/Pools#pools) dialog to setup each coin that you would like to mine along with their pools, including support for load balancing.
 
-![Configure starcoin]( "Configure starcoin")
 
-MultiMiner supports automatically mining the most profitable starcoin based on a set of configurable strategies. Profitability information is updated regularly from CoinWarz and WhatToMine.
 
-![Configure Strategies]("Configure Strategies")
+3. 区块链的特点
 
-MultiMiner supports features such as relaunching crashed miners, starting with Windows, minimizing to the notification area, and mining on startup.
+1. 去中心化
 
-![Settings]( "Settings")
 
-You can also use the interface provided by MultiMiner to adjust advanced settings such as API white-listing, disabling GPU mining, and automatically adjusting mining intensity based on the computer's idle time.
+  区块链是一种分布式数据存储结构，没有中心节点，所有节点都保存全部的相同的区块信息，完全实现去中心化。对于特殊的应用场景，可以适当地采用弱中心化的管理节点，即中心节点不影响整个区块链结构的运行，比如弱中心化的监管机制；若从安全角度来说，弱中心化结构中的中心节点要满足对于区块链的安全不构成威胁，对用户隐私不构成威胁等。
 
-![Advanced Miner Settings]( "Advanced Miner Settings")
 
-### Downloads
+2. 不可篡改性
 
-You can download installers and zip files for Windows, OS X, Linux and Mono on the [GitHub Releases page][12].
 
-### Drivers
+  一方面，区块链中存储的交易信息每一条都有相对应的Hash值，由每一条记录的Hash值作为叶子节点生成二叉Merkle树，Merkle树的根节点（Hash值）保存在本区块的块头部分，区块头部除了当前区块的Merkle树的根节点，还要保存时间戳以及前一个区块的标识符（Hash指针）形成一条链式结构。因此，要想篡改区块链中的一条记录，不仅要修改本区块的Hash值，还要修改后续所有区块的Hash值，或者生成一条新的区块链结构，使得新的链比原来的链更长。实际上，这是很难实现的。一般，一个区块后面有6个新的区块生成时，即可认为该区块不可篡改，可以将该区块加入到区块链的结构中了。
 
-Depending on your OS and the mining devices you plan on using you will need one or more of the following drivers / kernel extensions installed:
 
-* [Drivers](https://github.com/nwoolls/MultiMiner/wiki/Drivers)
+3. 不可伪造性
 
-### (https://github.com/nwoolls/MultiMiner/wiki/Installation#generic-mono-installation)
 
-### FAQ
+  区块链保存的交易数据中不仅含有Hash值，还有交易双方的签名以及验证方的签名。签名具有不可伪造性，因此具有不可伪造性。
 
-* How do I restart the setup wizard? How do I delete all my MultiMiner settings and start over?
-    * Reset settings by deleting the contents of %appdata%\MultiMiner (type that into the address bar in Windows Explorer). Be sure to quit MultiMiner before you delete the contents. Then, restart MultiMiner.
-* Should I modify my GPU settings (overclock, undervolt, etc) with a utility like MSI Afterburner, or via config flags in MultiMiner?
-    * Utilities like MSI Afterburner are recommended. Relying on BFGMiner (via the config flags in MultiMiner) to do the clocking and fan speed does work, but if the BFGMiner crashes it leaves things over/under-clocked/volted. GPU utilities seems to be more reliable.
-* I found a question and answer in the Support thread below (or through gosh darned trial and error) that I wish had been here in the FAQ - how do I save the next visitor all the trouble I went through?
-    * Simple! Make a pull request to add to the FAQ, or email your Q and A to cooper dot marcus at gmail dot com (Qs without As will be ignored) and he'll add it to the FAQ for you.
 
-### Support
+4. 可验证性
 
-Please report bugs and request enhancements at [issues.multiminerapp.com](http://issues.multiminerapp.com). For peer support and discussion, official forums for MultiMiner can be found [here][15].
-        
-### Source Code
-
-The source code is structured in such a way that it should be fairly easy to use and re-use for other projects:
-
-* __MultiMiner.Xgminer__ is an assembly for controlling the BFGMiner executable - e.g. launching and enumerating devices
-* __MultiMiner.Xgminer.Api__ assists in communicating with the underlying miner via the RPC API
-* __MultiMiner.CoinWarz__ assists in consuming the cypto-currency information available at [CoinWarz.com](https://www.coinwarz.com/)
-* __MultiMiner.WhatToMine__ assists in consuming the cypto-currency information available at [WhatToMine.com](http://whattomine.com/)
-* __MultiMiner.Engine__ is an assembly that can be used to interact with all functionality found in MultiMiner, but without a UI - useful for creating front-ends for other OS's
-* __MultiMiner.Win__ is the Windows Forms application
-
-### Source Code Example
-
-This simple example shows how to use [MultiMiner.Xgminer.dll][16] and [MultiMiner.Xgminer.Api.dll][17] to install BFGMiner, iterate through available mining devices, and launch the miner.
-
-Afterwards the BFGMiner [RPC API][18] is used to output the miner hashrate for a minute before the mining process is stopped. You can try this code out yourself in the [MultiMiner.Example][19] project.
-
-![MultiMiner.Api.Example]( "MultiMiner.Api.Example")
-
-```csharp
-//examples of using MultiMiner.Xgminer.dll and MultiMiner.Xgminer.Api.dll
-
-//download and install the latest version of BFGMiner
-const string executablePath = @"D:\bfgminer\";
-const string executableName = "bfgminer.exe";
-
-Console.WriteLine("Downloading and installing {0} from {1} to the directory {2}",
-    executableName, Xgminer.Installer.GetMinerDownloadRoot(), executablePath);
-
-//download and install BFGMiner from the official website
-Xgminer.Installer.InstallMiner(executablePath);
-try
-{
-    //create an instance of Miner with the downloaded executable
-    MinerConfiguration minerConfiguration = new MinerConfiguration()
-    {
-        ExecutablePath = Path.Combine(executablePath, executableName)
-    };
-    Miner miner = new Miner(minerConfiguration);
-
-    //use it to iterate through devices
-    List<Device> deviceList = miner.ListDevices();
-
-    Console.WriteLine("Using {0} to list available mining devices", executableName);
-
-    //output devices
-    foreach (Device device in deviceList)
-        Console.WriteLine("Device detected: {0}\t{1}\t{2}", device.Kind, device.Driver, device.Name);
-
-    //start mining if there are devices
-    if (deviceList.Count > 0)
-    {
-        Console.WriteLine("{0} device(s) detected, mining Bitcoin on Bitminter using all devices", deviceList.Count);
-
-        //setup a pool
-        MiningPool pool = new MiningPool()
-        {
-            Host = "mint.bitminter.com",
-            Port = 3333,
-            Username = "nwoolls_deepcore",
-            Password = "deepcore"
-        };
-        minerConfiguration.Pools.Add(pool);
-
-        //specify algorithm
-        minerConfiguration.Algorithm = CoinAlgorithm.SHA256;
-
-        //disable GPU mining
-        minerConfiguration.DisableGpu = true;
-
-        //specify device indexes to use
-        for (int i = 0; i < deviceList.Count; i++)
-            minerConfiguration.DeviceDescriptors.Add(deviceList[i]);
-
-        //enable RPC API
-        minerConfiguration.ApiListen = true;
-        minerConfiguration.ApiPort = 4028;
-
-        Console.WriteLine("Launching {0}", executableName);
-
-        //start mining
-        miner = new Miner(minerConfiguration);
-        System.Diagnostics.Process minerProcess = miner.Launch();
-        try
-        {
-            //get an API context
-            Xgminer.Api.ApiContext apiContext = new Xgminer.Api.ApiContext(minerConfiguration.ApiPort);
-            try
-            {
-                //mine for one minute, monitoring hashrate via the API
-                for (int i = 0; i < 6; i++)
-                {
-                    Thread.Sleep(1000 * 10); //sleep 10s
-
-                    //query the miner process via its RPC API for device information
-                    List<Xgminer.Api.Responses.DeviceInformationResponse> deviceInformation = apiContext.GetDeviceInformation();
-
-                    //output device information
-                    foreach (Xgminer.Api.Responses.DeviceInformationResponse item in deviceInformation)
-                        Console.WriteLine("Hasrate for device {0}: {1} current, {2} average", item.Index,
-                                item.CurrentHashrate, item.AverageHashrate);
-                }
-            }
-            finally
-            {
-                Console.WriteLine("Quitting mining via the RPC API");
-
-                //stop mining, try the API first
-                apiContext.QuitMining();
-            }
-        }
-        finally
-        {
-            Console.WriteLine("Killing any remaining process");
-
-            //then kill the process
-            try
-            {
-                minerProcess.Kill();
-                minerProcess.WaitForExit();
-                minerProcess.Close();
-            }
-            catch (InvalidOperationException ex)
-            {
-                //already closed
-            }
-        }
-    }
-    else
-    {
-        Console.WriteLine("No devices capable of mining detected");
-    }
-}
-finally
-{
-    Console.WriteLine("Cleaning up, deleting directory {0}", executablePath);
-    Directory.Delete(executablePath, true);
-}
-
-Console.WriteLine("Press any key to exit");
-Console.ReadKey();
-```
-
-### License
-
-Copyright (C) 2013 Nathanial Woolls
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-[1]: https://github.com/ckolivas/cgminer
-[2]: https://github.com/luke-jr/bfgminer
-[3]: https://www.dropbox.com/s/ne5eywfx8v7hneb/MultiMiner-1.0.7.zip
-[4]: http://ck.kolivas.org/apps/cgminer/
-[5]: https://github.com/nwoolls/homebrew-xgminer
-[6]: http://blog.nwoolls.com/2013/04/24/bitcoin-mining-on-mac-os-x-cgminer-bfgminer/
-[7]: http://xquartz.macosforge.org/
-[8]: http://www.mono-project.com/Main_Page
-[9]: http://coinchoose.com/
-[10]: http://luke.dashjr.org/programs/bitcoin/files/bfgminer/
-[11]: https://www.dropbox.com/s/o08inghtw7ut1an/MultiMiner-1.0.7.exe
-[12]: https://github.com/nwoolls/MultiMiner/releases
-[13]: https://github.com/nwoolls/xgminer-osx/
-[15]: http://talk.multiminerapp.com
-[16]: https://github.com/nwoolls/MultiMiner/tree/master/MultiMiner.Xgminer
-[17]: https://github.com/nwoolls/MultiMiner/tree/master/MultiMiner.Xgminer.Api
-[18]: https://github.com/luke-jr/bfgminer/blob/bfgminer/README.RPC
-[19]: https://github.com/nwoolls/MultiMiner/tree/master/MultiMiner.Example
-[20]: http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx
-[21]: http://minecoin.net/bluefuryredfury-driver-for-windows/
-[22]: http://www.ftdichip.com/Drivers/VCP.htm
-[23]: http://zadig.akeo.ie/
-[24]: http://support.amd.com/en-us/download
-[25]: http://store.bitcoin.org.pl/support
+
+  可验证性指的是数据来源的可验证。每一笔交易中电子货币的产生和输入、输出都是可以验证的。区块链结构中不会凭空增加电子货币。以比特币为例，每一笔交易的输入都是前一笔交易的输出，每一笔交易的输出又是下一笔交易的输入，即交易的可追溯性。除了来源的可验证外，还有交易金额的可验证，即验证金额的正确性，确保交易过程中的每一笔资金都是可靠的。目前，为了保证用户的隐私，很多电子货币通过混币、环签名、零知识证明等技术在数据可验证的情况下，尽可能地切断金额的可追溯性。
+
+
+5. 匿名性
+
+
+  区块链中的匿名性实际上是一种伪匿名性。区块链中使用假名技术来切断账号和真实身份的联系。比如，对用户公钥进行一系列的Hash运算，得到的固定长度的Hash值作为对应的电子账号。实际上，随着使用次数的增加，通过数据分析可以分析出账号的很多交易行为，比如经常和那些账号做交易，交易金额多少等，甚至可以和现实中的真实身份相联系。
+
+
+
+
+4. 区块链的结构
+
+（1） 层次结构
+
+比特币系统将区块链分成6层结构：数据层、网络层、共识层、合约层、激励层、应用层。其架构图如下：
+
+
+  
+
+
+文献[4] 中将区块链分成3层：网络层、交易层、应用层。架构图如下：
+
+
+  
+
+
+文献[5] 中的北航链将区块链分成6层：存储层、基础区块链层、缓存层、API层、链上代码层、应用层。其架构图如下：
+
+
+  
+
+
+（2） 数据结构
+
+区块链中的数据结构根据不同的应用会有所不同，但基本上都是由区块头（块头）和区块体（块身）组成。区块体保存的是若干条记录以及由每条记录的Hash值构成的二叉Merkle树。区块头一般包括版本号、前一区块的Hash值（Hash指针）、随机数、目标Hash（本区块的Hash值）、Merkle根，有时还会有用于PoW的计算困难门限值Difficulty等。根据不同的应用，块头和块身的数据项也会有所不同。根据需求，可以建立单链结果，还可以建立双链结构。下面是一个单链结构的简单的区块数据结构图[3]：
+
+
+  
+
+
+
+
+5. 区块链的应用
+
+
+  区块链由于其结构特点有着广阔的应用前景。最早，区块链作为比特币的核心技术被提出来。随着区块链的发展，尤其是与智能合约的结合，区块链技术的应用早已不再仅仅局限于数字货币等金融领域。 
+  区块链除了应用于金融领域（如Bitcoin, Monero, Zcash）外，还可以应用于能源互联网（能源区块链）、医疗事业（医疗区块链）、学术界学术记录、供应链管理、共享单车、云存储等。
+
+
+
+
+参考文献
+
+[1] 袁勇, 王飞跃. 区块链技术发展现状与展望[J]. 自动化学报, 2016, 42(4):481-494. 
+[2] Beck R, Czepluch J S, Lollike N, et al. BLOCKCHAIN – THE GATEWAY TO TRUST-FREE CRYPTOGRAPHIC TRANSACTIONS[C]// Twenty-Fourth European Conference on Information Systems. 2016. 
+[3] 朱建明, 付永贵. 区块链应用研究进展[J]. 科技导报, 2017, 35(13):70-76. 
+[4] 祝烈煌,高峰,沈蒙,李艳东,郑宝昆,毛洪亮,吴震.区块链隐私保护研究综述[J/OL].计算机研究与发展,2017,(10):. 
+[5] 蔡维德,郁莲,王荣,刘娜,邓恩艳.基于区块链的应用系统开发方法研究.软件学报,2017,28(6):1474-1487.
