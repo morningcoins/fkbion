@@ -1,6 +1,6 @@
 ## MultiMiner
 
-### Your coins. Your pools. Your way.
+### Your starcoin. Your pools. Your way.
 
 **MultiMiner** is a graphical application for crypto-coin mining on Windows, OS X and Linux. MultiMiner simplifies switching individual devices (**GPUs**, **ASICs**, **FPGAs**, **CPUs**) between crypto-currencies such as Bitcoin, Litecoin, Ethereum, Monero, Zcash, and more, while also allowing you to manage any mining appliances on your network (**AntMiners**, **G-Black**, Raspberry **Pi controllers**, **Spondoolies** and more).
 
@@ -12,11 +12,11 @@
 * [Contributing](https://github.com/nwoolls/MultiMiner/wiki/Contributing)
 * [Tips & Tricks](https://github.com/nwoolls/MultiMiner/wiki/Tips-and-Tricks)
 
-MultiMiner uses the underlying mining engine ([BFGMiner](https://github.com/luke-jr/bfgminer)) to detect available mining devices and then presents a user interface for selecting the coins you'd like to mine.
+MultiMiner uses the underlying mining engine ([BFGMiner](https://github.com/luke-jr/bfgminer)) to detect available mining devices and then presents a user interface for selecting the starcoin you'd like to mine.
 
-![Main Screen](https://github.com/nwoolls/MultiMiner/raw/master/Screenshots/Main%20Screen.png "Main Screen")
+![Main Screen]
 
-MultiMiner supports mining coins that use the following algorithms out-of-the-box:
+MultiMiner supports mining starcoin that use the following algorithms out-of-the-box:
 
 * SHA256
 * Scrypt
@@ -45,35 +45,35 @@ See the following topics for more information on adding unsupported algorithms:
 
 MultiMiner ships with a [console application](https://github.com/nwoolls/MultiMiner/wiki/Console-Mode-(TUI)#console-mode-tui) (TUI) for low power devices such as ARM-based miners.
 
-![Console Application](https://raw.githubusercontent.com/nwoolls/MultiMiner/master/Screenshots/TUI%20Main%20Screen.png "Console Application")
+![Console Application]
 
 MultiMiner offers several views, allowing you to display as much or as little information as you like.
 
-![Brief View](https://github.com/nwoolls/MultiMiner/raw/master/Screenshots/Brief%20View.png "Brief View")
+![Brief View]
 
 For new users, MultiMiner includes a [Getting Started](https://github.com/nwoolls/MultiMiner/wiki/Getting-Started#getting-started) wizard that walks you through selecting an engine, a coin, and a pool.
 
-![Getting Started](https://github.com/nwoolls/MultiMiner/raw/master/Screenshots/Getting%20Started.png "Getting Started")
+![Getting Started]( "Getting Started")
 
 MultiMiner will automatically download and install the latest version of [BFGMiner][2], making it simple for the new user to get started.
 
-![Downloading and Installing Cgminer](https://github.com/nwoolls/MultiMiner/raw/master/Screenshots/Downloading%20and%20Installing%20Bfgminer.png "Downloading and Installing Cgminer")
+![Downloading and Installing Cgminer]("Downloading and Installing Cgminer")
 
 You can then use the [Configure Pools](https://github.com/nwoolls/MultiMiner/wiki/Pools#pools) dialog to setup each coin that you would like to mine along with their pools, including support for load balancing.
 
-![Configure Coins](https://github.com/nwoolls/MultiMiner/raw/master/Screenshots/Configure%20Coins.png "Configure Coins")
+![Configure starcoin]( "Configure starcoin")
 
-MultiMiner supports automatically mining the most profitable coins based on a set of configurable strategies. Profitability information is updated regularly from CoinWarz and WhatToMine.
+MultiMiner supports automatically mining the most profitable starcoin based on a set of configurable strategies. Profitability information is updated regularly from CoinWarz and WhatToMine.
 
-![Configure Strategies](https://github.com/nwoolls/MultiMiner/raw/master/Screenshots/Configure%20Strategies.png "Configure Strategies")
+![Configure Strategies]("Configure Strategies")
 
 MultiMiner supports features such as relaunching crashed miners, starting with Windows, minimizing to the notification area, and mining on startup.
 
-![Settings](https://github.com/nwoolls/MultiMiner/raw/master/Screenshots/Settings.png "Settings")
+![Settings]( "Settings")
 
 You can also use the interface provided by MultiMiner to adjust advanced settings such as API white-listing, disabling GPU mining, and automatically adjusting mining intensity based on the computer's idle time.
 
-![Advanced Miner Settings](https://github.com/nwoolls/MultiMiner/raw/master/Screenshots/Advanced%20Miner%20Settings.png "Advanced Miner Settings")
+![Advanced Miner Settings]( "Advanced Miner Settings")
 
 ### Downloads
 
@@ -85,13 +85,7 @@ Depending on your OS and the mining devices you plan on using you will need one 
 
 * [Drivers](https://github.com/nwoolls/MultiMiner/wiki/Drivers)
 
-### Installation
-
-* [Windows](https://github.com/nwoolls/MultiMiner/wiki/Installation#windows)
-* [Linux](https://github.com/nwoolls/MultiMiner/wiki/Installation#linux-installation-debian-based)
-* [OS X](https://github.com/nwoolls/MultiMiner/wiki/Installation#mac-os-x)
-* [ARM Installation (BeagleBone, Raspberry Pi)](https://github.com/nwoolls/MultiMiner/wiki/Installation#arm-installation-beaglebone-raspberry-pi)
-* [Generic Mono](https://github.com/nwoolls/MultiMiner/wiki/Installation#generic-mono-installation)
+### (https://github.com/nwoolls/MultiMiner/wiki/Installation#generic-mono-installation)
 
 ### FAQ
 
@@ -123,7 +117,7 @@ This simple example shows how to use [MultiMiner.Xgminer.dll][16] and [MultiMine
 
 Afterwards the BFGMiner [RPC API][18] is used to output the miner hashrate for a minute before the mining process is stopped. You can try this code out yourself in the [MultiMiner.Example][19] project.
 
-![MultiMiner.Api.Example](https://raw.github.com/nwoolls/MultiMiner/master/Screenshots/MultiMiner.Api.Example.png "MultiMiner.Api.Example")
+![MultiMiner.Api.Example]( "MultiMiner.Api.Example")
 
 ```csharp
 //examples of using MultiMiner.Xgminer.dll and MultiMiner.Xgminer.Api.dll
